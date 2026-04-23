@@ -7,33 +7,24 @@ A **transfer function** is a mathematical representation that models the input�
 ## 1. Transfer Function of Low-Pass Filter
 
 The transfer function is given by:
-
-\[
-H(\omega) = \frac{V_{\text{out}}}{V_{\text{in}}} = \frac{Z_C}{Z_R + Z_C}
-\]
+Hw = Vout/Vin =  Zc / (Zr + Zc)
 
 Where:
 
-- \( Z_C = \frac{1}{\omega C} \)
-- \( Z_R = R \)
+Zc = 1 / (ωC)  
+Zr = R  
 
 Substituting:
 
-\[
-H(\omega) = \frac{\frac{1}{\omega C}}{R + \frac{1}{\omega C}}
-\]
+H(ω) = R / (R + ωC)
 
 Simplifying:
 
-\[
-H(\omega) = \frac{1}{1 + \omega RC}
-\]
+H(ω) = 1 / (1 + ωRC)
 
 For given values:
 
-\[
-H(\omega) = \frac{1}{1 + \omega \cdot 0.159 \times 10^{-3}}
-\]
+H(ω) = 1 / (1 + ω · 0.159 × 10⁻³)
 
 ---
 
@@ -47,21 +38,15 @@ A band-pass filter is formed by cascading a high-pass filter and a low-pass filt
 
 #### High-Pass Filter
 
-\[
-H_{\text{HP}}(\omega) = \frac{Z_R}{Z_R + Z_C}
-\]
+Hw = Vout/Vin =  Zc / (Zr + Zc)
 
-\[
-H_{\text{HP}}(\omega) = \frac{\omega R_1 C_1}{1 + \omega R_1 C_1}
-\]
+H_HP(ω) = (ωR₁C₁) / (1 + ωR₁C₁)
 
 ---
 
 #### Low-Pass Filter
 
-\[
-H_{\text{LP}}(\omega) = \frac{1}{1 + \omega R_2 C_2}
-\]
+H_LP(ω) = 1 / (1 + ωR₂C₂)
 
 ---
 
@@ -69,20 +54,11 @@ H_{\text{LP}}(\omega) = \frac{1}{1 + \omega R_2 C_2}
 
 Since the filters are cascaded:
 
-\[
-H(\omega) = H_{\text{HP}}(\omega) \cdot H_{\text{LP}}(\omega)
-\]
-
-\[
-H(\omega) = \frac{\omega R_1 C_1}{(1 + \omega R_1 C_1)(1 + \omega R_2 C_2)}
-\]
-
+H(ω) = (ωR₁C₁) / [(1 + ωR₁C₁)(1 + ωR₂C₂)]
 ---
 
 ### Final Expression with Values
 
-\[
-H(\omega) = \frac{\omega \cdot 0.159 \times 10^{-3}}{\left(1 + \omega \cdot 0.159 \times 10^{-3}\right)\left(1 + \omega \cdot 0.159 \times 10^{-4}\right)}
-\]
+H(ω) = (ω · 0.159 × 10⁻³) / [(1 + ω · 0.159 × 10⁻³)(1 + ω · 0.159 × 10⁻⁴)]
 
 ---
